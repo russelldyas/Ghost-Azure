@@ -180,4 +180,3 @@ stages:
           PathtoPublish: '$(Build.ArtifactStagingDirectory)\ArtifactsToBePublished'
           ArtifactName: 'drop'
           publishLocation: 'Container'
-- 
