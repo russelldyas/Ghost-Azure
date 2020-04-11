@@ -34,10 +34,14 @@ stages:
 
       - script: yarn --ignore-engines --production
 
+
+
+
+
       - task: AzurePowerShell@3
         displayName: 'Download files from production'
         inputs:
-          azureSubscription: '$(AzureSubscription)'
+          azureSubscription: 'Russll MSDN (ebb7e50b-4603-4368-a1dc-0a4d74cfefcf)'
           ScriptType: 'InlineScript'
           Inline: |
             function Get-AzureRmWebAppPublishingCredentials($resourceGroupName, $webAppName, $slotName = $null){
