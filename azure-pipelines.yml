@@ -129,10 +129,10 @@ stages:
           cleanDestinationFolder: true
 
       - task: ExtractFiles@1
-        displayName: 'Extract casperforyr.zip'
+        displayName: 'Extract casper.zip'
         inputs:
-          archiveFilePatterns: 'casperforyr.zip'
-          destinationFolder: 'content/themes/casperforyr'
+          archiveFilePatterns: 'casper.zip'
+          destinationFolder: 'content/themes/casper'
           cleanDestinationFolder: true
 
       - powershell: 'Rename-Item "$(Build.Repository.LocalPath)/content/data/backup.db" "ghost.db"'
