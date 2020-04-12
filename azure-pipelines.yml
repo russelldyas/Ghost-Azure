@@ -128,12 +128,20 @@ stages:
           destinationFolder: 'content/images'
           cleanDestinationFolder: true
 
+
+
       - task: ExtractFiles@1
         displayName: 'Extract casper.zip'
         inputs:
           archiveFilePatterns: 'casper.zip'
           destinationFolder: 'content/themes/casper'
           cleanDestinationFolder: true
+      - task: DeleteFiles@1
+        displayName: 'Delete files from '
+        inputs:
+          SourceFolder: $(Build.Repository.LocalPath)/content/data/
+          Contents: |
+            ghost.db
 
       - powershell: 'Rename-Item "$(Build.Repository.LocalPath)/content/data/backup.db" "ghost.db"'
         displayName: 'Rename database file'
