@@ -70,7 +70,7 @@ stages:
                 else{
                     $kuduApiUrl = "https://$webAppName`-$slotName.scm.azurewebsites.net/api/triggeredwebjobs/$webJobName/run"
                 }
-            
+                write-host "url is $kuduApiUrl"
                 Invoke-RestMethod -Uri $kuduApiUrl `
                                     -Headers @{"Authorization"=$kuduApiAuthorisationToken} `
                                     -Method POST `
