@@ -37,7 +37,7 @@ stages:
       - task: AzurePowerShell@3
         displayName: 'Download files from production'
         inputs:
-          azureSubscription: '$(AzureSubscription)'
+          azureSubscription: 'Russll MSDN (ebb7e50b-4603-4368-a1dc-0a4d74cfefcf)'
           ScriptType: 'InlineScript'
           Inline: |
             function Get-AzureRmWebAppPublishingCredentials($resourceGroupName, $webAppName, $slotName = $null){
@@ -205,7 +205,7 @@ stages:
           - task: AzureAppServiceManage@0
             displayName: 'Stop Azure App Service'
             inputs:
-              azureSubscription: '$(AzureSubscription)'
+              azureSubscription: 'Russll MSDN (ebb7e50b-4603-4368-a1dc-0a4d74cfefcf)'
               Action: 'Stop Azure App Service'
               WebAppName: '$(WebApp)'
               SpecifySlotOrASE: true
@@ -215,7 +215,7 @@ stages:
             displayName: 'Deploy Azure App Service to Slot'
             inputs:
               ConnectionType: 'AzureRM'
-              azureSubscription: '$(AzureSubscription)'
+              azureSubscription: 'Russll MSDN (ebb7e50b-4603-4368-a1dc-0a4d74cfefcf)'
               appType: 'webApp'
               WebAppName: '$(WebApp)'
               deployToSlotOrASE: true
@@ -256,7 +256,7 @@ stages:
           - task: AzureAppServiceManage@0
             displayName: 'Swap Slots'
             inputs:
-              azureSubscription: '$(AzureSubscription)'
+              azureSubscription: 'Russll MSDN (ebb7e50b-4603-4368-a1dc-0a4d74cfefcf)'
               Action: 'Swap Slots'
               WebAppName: '$(WebApp)'
               ResourceGroupName: '$(ResourceGroup)'
@@ -292,7 +292,7 @@ stages:
           - task: AzureAppServiceManage@0
             displayName: 'Stop Azure App Service'
             inputs:
-              azureSubscription: '$(AzureSubscription)'
+              azureSubscription: 'Russll MSDN (ebb7e50b-4603-4368-a1dc-0a4d74cfefcf)'
               Action: 'Stop Azure App Service'
               WebAppName: '$(WebApp)'
               SpecifySlotOrASE: true
@@ -302,7 +302,7 @@ stages:
             displayName: 'Deploy Azure App Service to Slot'
             inputs:
               ConnectionType: 'AzureRM'
-              azureSubscription: '$(AzureSubscription)'
+              azureSubscription: 'Russll MSDN (ebb7e50b-4603-4368-a1dc-0a4d74cfefcf)'
               appType: 'webApp'
               WebAppName: '$(WebApp)'
               deployToSlotOrASE: true
@@ -316,7 +316,7 @@ stages:
           - task: AzureAppServiceManage@0
             displayName: 'Start Azure App Service'
             inputs:
-              azureSubscription: '$(AzureSubscription)'
+              azureSubscription: 'Russll MSDN (ebb7e50b-4603-4368-a1dc-0a4d74cfefcf)'
               Action: 'Start Azure App Service'
               WebAppName: '$(WebApp)'
               SpecifySlotOrASE: true
